@@ -26,6 +26,8 @@
           extend: {
             colors: {
               primary: "#B4F461",
+              dark1: "#111111",
+              dark2: "rgba(17, 17, 17, 0.7)",
             },
           },
         },
@@ -37,15 +39,33 @@
       }
     </style>
   </head>
-  <body class="w-11/12 mx-auto">
+  <body>
     <header>
-      <nav>
-        <div>
-          <button class="btn btn-active">Blog</button>
-        </div>
-        <div></div>
-        <div></div>
-      </nav>
+      <div class="bg-[rgb(249,247,243)]">
+        <nav
+          class="flex justify-between gap-4 items-center pt-5 pb-10 w-11/12 mx-auto"
+        >
+          <div>
+            <button
+              class="btn bg-primary text-dark1 hover:bg-primary px-6 text-xl"
+            >
+              Blog
+            </button>
+          </div>
+          <div class="flex items-center justify-center gap-3">
+            <img src="./images/logo.png" alt="" />
+            <h2 class="hidden md:block text-dark1 text-xl font-semibold">
+              Donate Bangladesh
+            </h2>
+          </div>
+          <div class="flex items-center justify-center gap-3">
+            <img src="./images/coin.png" alt="" />
+            <p class="text-dark2 text-xl font-medium">
+              <span class="pr-1">1000</span>BDT
+            </p>
+          </div>
+        </nav>
+      </div>
     </header>
     <main></main>
   </body>
