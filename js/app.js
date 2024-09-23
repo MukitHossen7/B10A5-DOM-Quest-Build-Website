@@ -1,22 +1,14 @@
 // Input common function by id
 function getInputValueById(id) {
-  // const inputValue = parseFloat(document.getElementById(id).value);
   const inputValue = Number(document.getElementById(id).value);
   return inputValue;
 }
 
 // text common function by id
 function getTextValueById(id) {
-  // const textValue = parseFloat(document.getElementById(id).innerText);
   const textValue = Number(document.getElementById(id).innerText);
   return textValue;
 }
-
-//Add History Section Click donate now button
-
-// function clickDonateNowBtn(id) {
-
-// }
 
 //Noakhali Donate function
 
