@@ -138,6 +138,7 @@ document
 let historyBtn = document.getElementById("history-btn");
 let donationBtn = document.getElementById("donation-btn");
 let donationContainer = document.getElementById("donation-container");
+let historySection = document.getElementById("history-section");
 document.getElementById("history-btn").addEventListener("click", function () {
   historyBtn.classList.add("bg-primary", "font-semibold", "text-dark1");
   historyBtn.classList.remove(
@@ -152,6 +153,7 @@ document.getElementById("history-btn").addEventListener("click", function () {
     "text-dark2"
   );
   donationContainer.classList.add("hidden");
+  historySection.classList.remove("hidden");
 });
 
 document.getElementById("donation-btn").addEventListener("click", function () {
@@ -168,4 +170,5 @@ document.getElementById("donation-btn").addEventListener("click", function () {
     "text-dark2"
   );
   donationContainer.classList.remove("hidden");
+  historySection.classList.add("hidden");
 });
