@@ -1,15 +1,25 @@
 // Input common function by id
 function getInputValueById(id) {
-  const inputValue = parseFloat(document.getElementById(id).value);
+  // const inputValue = parseFloat(document.getElementById(id).value);
+  const inputValue = Number(document.getElementById(id).value);
   return inputValue;
 }
 
 // text common function by id
 function getTextValueById(id) {
-  const textValue = parseFloat(document.getElementById(id).innerText);
+  // const textValue = parseFloat(document.getElementById(id).innerText);
+  const textValue = Number(document.getElementById(id).innerText);
   return textValue;
 }
+
+//Add History Section Click donate now button
+
+// function clickDonateNowBtn(id) {
+
+// }
+
 //Noakhali Donate function
+
 document
   .getElementById("noakhali-donate-btn")
   .addEventListener("click", function () {
@@ -25,10 +35,25 @@ document
       alert("Invalid Donation amount");
       return;
     }
+
     document.getElementById("noakhali-amount").innerText =
       amount + noakhaliDonateAmount;
     document.getElementById("my-amount").innerText =
       myAmountBalance - noakhaliDonateAmount;
+    let div = document.createElement("div");
+    div.innerHTML = `
+      <div class="border border-slate-200 rounded-lg mt-4 mb-4 p-4 space-y-3">
+          <h3 class="font-bold text-lg">
+            ${
+              amount + noakhaliDonateAmount
+            } Taka is Donated for flood at Noakhali, Bangladesh
+          </h3>
+          <p class="text-dark2 text-sm bg-slate-100 p-3 rounded-xl">
+            Date : ${new Date()}
+          </p>
+        </div>
+    `;
+    document.getElementById("history-section").appendChild(div);
     my_modal.showModal();
     emptyAmount.value = "";
   });
@@ -55,7 +80,20 @@ document
       amount + feniDonateAmount;
     document.getElementById("my-amount").innerText =
       myAmountBalance - feniDonateAmount;
-
+    let div = document.createElement("div");
+    div.innerHTML = `
+        <div class="border border-slate-200 rounded-lg mt-4 mb-4 p-4 space-y-3">
+            <h3 class="font-bold text-lg">
+              ${
+                amount + feniDonateAmount
+              } Taka is Donated for famine-2024 at Feni, Bangladesh
+            </h3>
+            <p class="text-dark2 text-sm bg-slate-100 p-3 rounded-xl">
+              Date : ${new Date()}
+            </p>
+          </div>
+      `;
+    document.getElementById("history-section").appendChild(div);
     my_modal.showModal();
     emptyAmount.value = "";
   });
@@ -83,15 +121,30 @@ document
     document.getElementById("my-amount").innerText =
       myAmountBalance - quotoMovementDonate;
 
+    let div = document.createElement("div");
+    div.innerHTML = `
+          <div class="border border-slate-200 rounded-lg mt-4 mb-4 p-4 space-y-3">
+              <h3 class="font-bold text-lg">
+                ${
+                  amount + quotoMovementDonate
+                } Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh
+              </h3>
+              <p class="text-dark2 text-sm bg-slate-100 p-3 rounded-xl">
+                Date : ${new Date()}
+              </p>
+            </div>
+        `;
+    document.getElementById("history-section").appendChild(div);
+
     my_modal.showModal();
     emptyAmount.value = "";
   });
 
 //Toggle Button
-
+let historyBtn = document.getElementById("history-btn");
+let donationBtn = document.getElementById("donation-btn");
+let donationContainer = document.getElementById("donation-container");
 document.getElementById("history-btn").addEventListener("click", function () {
-  let historyBtn = document.getElementById("history-btn");
-  let donationBtn = document.getElementById("donation-btn");
   historyBtn.classList.add("bg-primary", "font-semibold", "text-dark1");
   historyBtn.classList.remove(
     "border-2",
@@ -104,11 +157,10 @@ document.getElementById("history-btn").addEventListener("click", function () {
     "border-[rgba(17,17,17,0.3)]",
     "text-dark2"
   );
+  donationContainer.classList.add("hidden");
 });
 
 document.getElementById("donation-btn").addEventListener("click", function () {
-  let donationBtn = document.getElementById("donation-btn");
-  let historyBtn = document.getElementById("history-btn");
   donationBtn.classList.add("bg-primary", "font-semibold", "text-dark1");
   historyBtn.classList.remove("bg-primary", "font-semibold", "text-dark1");
   historyBtn.classList.add(
@@ -121,4 +173,5 @@ document.getElementById("donation-btn").addEventListener("click", function () {
     "border-[rgba(17,17,17,0.3)]",
     "text-dark2"
   );
+  donationContainer.classList.remove("hidden");
 });
