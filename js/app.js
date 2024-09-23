@@ -44,9 +44,7 @@ document
     div.innerHTML = `
       <div class="border border-slate-200 rounded-lg mt-4 mb-4 p-4 space-y-3">
           <h3 class="font-bold text-lg">
-            ${
-              amount + noakhaliDonateAmount
-            } Taka is Donated for flood at Noakhali, Bangladesh
+            ${noakhaliDonateAmount} Taka is Donated for flood at Noakhali, Bangladesh
           </h3>
           <p class="text-dark2 text-sm bg-slate-100 p-3 rounded-xl">
             Date : ${new Date()}
@@ -84,9 +82,7 @@ document
     div.innerHTML = `
         <div class="border border-slate-200 rounded-lg mt-4 mb-4 p-4 space-y-3">
             <h3 class="font-bold text-lg">
-              ${
-                amount + feniDonateAmount
-              } Taka is Donated for famine-2024 at Feni, Bangladesh
+              ${feniDonateAmount} Taka is Donated for famine-2024 at Feni, Bangladesh
             </h3>
             <p class="text-dark2 text-sm bg-slate-100 p-3 rounded-xl">
               Date : ${new Date()}
@@ -125,9 +121,7 @@ document
     div.innerHTML = `
           <div class="border border-slate-200 rounded-lg mt-4 mb-4 p-4 space-y-3">
               <h3 class="font-bold text-lg">
-                ${
-                  amount + quotoMovementDonate
-                } Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh
+                ${quotoMovementDonate} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh
               </h3>
               <p class="text-dark2 text-sm bg-slate-100 p-3 rounded-xl">
                 Date : ${new Date()}
