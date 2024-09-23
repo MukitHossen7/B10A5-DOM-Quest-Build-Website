@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Page</title>
+    <!-- google-fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- google-fonts -->
+    <!-- daisyUI cdn and tailwind cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- daisyUI cdn and tailwind cdn -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#B4F461",
+              dark1: "#111111",
+              dark2: "rgba(17, 17, 17, 0.7)",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Lexend";
+      }
+    </style>
+  </head>
+  <body>
+    <header
+      class="shadow-md w-full sticky top-0 backdrop-filter backdrop-blur-lg bg-opacity-30"
+    >
+      <!-- navbar section start -->
+      <div class="bg-[rgb(249,247,243)]">
+        <nav
+          class="flex justify-between gap-4 items-center pt-5 pb-10 w-11/12 mx-auto"
+        >
+          <div>
+            <a
+              href="./index.html"
+              class="btn bg-primary text-dark1 hover:bg-primary px-6 text-xl"
+            >
+              Home
+            </a>
+          </div>
+          <div class="flex items-center justify-center gap-3">
+            <img src="./images/logo.png" alt="" />
+            <h2 class="hidden md:block text-dark1 text-xl font-semibold">
+              Donate Bangladesh
+            </h2>
+          </div>
+          <div class="flex items-center justify-center gap-3">
+            <img src="./images/coin.png" alt="" />
+            <p class="text-dark2 text-xl font-medium">
+              <span id="my-amount" class="pr-1">10000</span>BDT
+            </p>
+          </div>
+        </nav>
+      </div>
+      <!-- navbar section end -->
+    </header>
+  </body>
+</html>
