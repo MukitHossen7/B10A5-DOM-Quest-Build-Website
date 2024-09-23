@@ -11,7 +11,6 @@ function getTextValueById(id) {
 }
 
 //Noakhali Donate function
-
 document
   .getElementById("noakhali-donate-btn")
   .addEventListener("click", function () {
@@ -19,6 +18,7 @@ document
     const noakhaliDonateAmount = getInputValueById("noakhali-donate-amount");
     const amount = getTextValueById("noakhali-amount");
     const myAmountBalance = getTextValueById("my-amount");
+
     if (
       isNaN(noakhaliDonateAmount) ||
       noakhaliDonateAmount <= 0 ||
@@ -131,6 +131,7 @@ let historyBtn = document.getElementById("history-btn");
 let donationBtn = document.getElementById("donation-btn");
 let donationContainer = document.getElementById("donation-container");
 let historySection = document.getElementById("history-section");
+
 document.getElementById("history-btn").addEventListener("click", function () {
   historyBtn.classList.add("bg-primary", "font-semibold", "text-dark1");
   historyBtn.classList.remove(
