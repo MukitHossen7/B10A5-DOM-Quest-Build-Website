@@ -77,7 +77,7 @@ document
               ${feniDonateAmount} Taka is Donated for famine-2024 at Feni, Bangladesh
             </h3>
             <p class="text-dark2 text-sm bg-slate-100 p-3 rounded-xl">
-              Date : ${new Date()}
+              Date : ${new Date().toLocaleString()}
             </p>
           </div>
       `;
@@ -116,7 +116,7 @@ document
                 ${quotoMovementDonate} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh
               </h3>
               <p class="text-dark2 text-sm bg-slate-100 p-3 rounded-xl">
-                Date : ${new Date()}
+                Date : ${new Date().toLocaleString()}
               </p>
             </div>
         `;
